@@ -1,0 +1,96 @@
+/* Navbar */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1.4rem 2.5rem; /* increases height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.brand img {
+  width: 68px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand img:hover {
+  transform: scale(1.08);
+}
+
+/* Nav list */
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+}
+
+/* Nav links */
+.navLink {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+/* 🔘 Login Button */
+.loginBtn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.6rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.loginBtn:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .navList {
+    gap: 1.2rem;
+  }
+}

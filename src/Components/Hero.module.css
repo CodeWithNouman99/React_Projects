@@ -1,0 +1,147 @@
+/* Hero Section Container */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7.8rem 6rem;
+  background-color: #f8f9fa; /* Light background */
+  gap: 2rem;
+}
+
+/* Hero Text Content */
+.hero_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero_content p:first-child {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.hero_content p:nth-child(2) {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Buttons container */
+.hero_btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Buttons styling */
+.hero_btn button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.hero_btn button:first-child {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero_btn button:first-child:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.hero_btn button:nth-child(2) {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.hero_btn button:nth-child(2):hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* "Also Available On" text */
+.hero_btn p {
+  margin: 0 1rem 0 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Brand Logos */
+.hero_btn img {
+  width: 80px;;
+  height: auto;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero_btn img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Image */
+.hero_img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.hero_img img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive: Mobile */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .hero_content {
+    text-align: center;
+  }
+
+  .hero_btn {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero_img {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero_content p:first-child {
+    font-size: 1.5rem;
+  }
+
+  .hero_content p:nth-child(2) {
+    font-size: 0.95rem;
+  }
+
+  .hero_btn img {
+    width: 60px;
+  }
+}
